@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lib-sys</title>
+    <link rel="stylesheet" href="page1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <!-- navigation-bar -->
+        <div class="navbar">
+            <img class="logo" src="images/bookFinder-logo.jpeg">
+            <div class="logo-heading">
+                <h1 style="padding: 0px; margin-top: 10px">BookFinder</h1>
+            </div>
+        </div>
+      <div class="header">
+        <ul>
+            <li class="list-class">
+                <a href="home" title="home">Home</a>
+                <a href="about">About</a>
+                <div class="button-div">
+                    <button class="button-class">Books</button>
+                    <div class="books-list">
+                        <a href="#">Subjects</a>
+                        <a href="#">Sports</a>
+                        <a href="#">Stories</a>
+                        <a href="#">Technology</a>
+                    </div>
+                </div>
+            </li>
+            <div class="nav-rightbar">
+                <button id="logout" class="logout-class">Logout</button>
+            </div>
+        </ul>
+       </div>
+    </header>
+    
+    <!-- image-backgrond -->
+    <div class="main">
+      <div class="img-div">
+          <img class="img-class" src="images/background-img9.jpg">
+          <div class="text-quote">
+            <p class="quote">
+                "<span class="text-1">Find Your</span> <span class="text-2">Book</span>  <span class="text-3">here"</span>
+            </p>
+           </div>
+           <div class="input-div"> 
+              <input class="search" type="text" placeholder="Search book">
+              <div class="icon">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </div>
+            </div>
+            <div class="main-boxes">
+            <div class="box1 box">
+                
+                <div class="img1-div">
+                    <img class="img1" src="images/book-img1.jpg">
+                    <p class="sub-text">Subjects</p>
+                </div>
+            </div>
+            <div class="box2 box">
+                <div class="img2-div">
+                    <img class="img2" src="images/book-img2.jpg">
+                    <p class="sub-text">Stories</p>
+                </div>
+            </div>
+            <div class="box3 box">
+                <div class="img3-div">
+                    <img class="img3" src="images/book-img3.jpg">
+                    <p class="sub-text">sports</p>
+                </div>
+            </div>
+            <div class="box4 box">
+                <div class="img4-div">
+                    <img class="img4" src="images/book-img4.jpg">
+                    <p class="sub-text">Technologies</p>
+                </div>
+            </div></div>
+        </div>
+    </div>
+    <script>
+        document.getElementById('logout').addEventListener('click', function() {
+            window.location.href = 'login.html';
+        });
+    </script>
+</body>
+</html>

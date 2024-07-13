@@ -1,0 +1,230 @@
+
+.logo{
+    height: 60px;
+    border-radius: 30px;
+    box-shadow: 2px 2px 10px grey;
+    display: inline-block;
+}
+.logo-heading{
+    margin-left: 20px;
+    font-family: Georgia;
+}
+.navbar{
+    height: 70px;
+    display: flex;
+}
+.header{
+    background-color: black;
+    height: 55px;
+    display: flex;
+}
+ul{
+    list-style: none;
+    display: flex;
+}
+li a{
+    text-decoration: none;
+    padding: 10px;
+    color: white;
+    font-size: 20px;
+    vertical-align: top;
+}
+li a:hover{
+   background-color: rgb(199, 191, 191);
+}
+.nav-rightbar{
+    margin-left: 1150px;
+    float : right;
+    cursor: pointer;
+}
+.logout-class:hover{
+    background-color: grey;
+}
+/* button */
+.button-class ,.logout-class{
+    background-color: black;
+    color: white;
+    border: none;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    cursor: pointer;
+    padding : 0px;
+    background: none;
+}
+.button-div{
+    /* display: inline-block; */
+    position: relative;
+    float: right;
+    margin-left: 10px;
+
+}
+.books-list{
+    display: none;
+    position: absolute;
+    background-color: black;
+}
+.books-list a{
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 5px 5px;
+}
+.books-list a:hover{
+    background-color: grey;
+}
+.button-div:hover .books-list{ display: block;
+}
+.button-div:hover .button-class {
+    background-color: grey;
+}
+
+/* image-background */
+.img-class{
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.input-div{
+    position: absolute;
+    top: 34%;
+    left: 50%;
+    display: flex;
+    
+}
+.search{
+    width:  500px;
+    height: 40px;
+    border-radius: 7px; 
+    font-size: 20px;  
+    padding-left: 10px;
+}
+.icon{
+    background-color: rgb(39, 2, 2);
+    width: 50px;
+    height: 46px;
+    color: white;
+   text-align: center;
+   cursor: pointer;
+   border-radius: 8px;
+}
+.icon:hover{
+    opacity: 0.6;
+}
+i{
+    margin-top: 16px; 
+}
+.text-quote{
+    position:absolute;
+    top: 30%;
+    left: 5%;
+    width: 400px;
+    font-size: 30px;
+    color: white;
+    font-family: Bodoni Moda;
+    top: 25%;
+}
+
+.quote{
+    font-family: Bodoni Moda;
+    color: white;
+
+}
+
+.text-1{
+    font-weight: bold;
+    font-size: 70px;
+}
+.text-2{
+    font-size: 50px;
+    line-height: 20px;
+    margin-left: 10px;
+}
+
+/* for boxes */
+
+.main-boxes{
+    position: absolute;
+    top: 70%;
+    margin-left: 20px;
+}
+.box{
+    display: inline-block;
+    padding: 10px;
+    margin-right: 45px;
+    /* margin-top: 20px; */
+    border-color: white;
+    background-color: white;
+    border-style: solid;
+    /* border-width: 2px; */
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    transition: 0.25s;
+}
+.box:hover{
+    box-shadow: 2px 2px 15px white;
+}
+.box1.box{
+    box-shadow: 5px 3px 10px;
+}
+.box1.box:hover{
+    box-shadow: 2px 8px 10px;
+}
+.box2.box{
+    box-shadow: 5px 3px 10px;
+}
+.box2.box:hover{
+    box-shadow: 2px 8px 10px;
+}
+.box3.box{
+    box-shadow: 5px 3px 10px;
+}
+.box3.box:hover{
+    box-shadow: 2px 8px 10px;
+}
+.box4.box{
+    box-shadow: 5px 3px 10px;
+}
+.box4.box:hover{
+    box-shadow: 2px 8px 10px;
+}
+.img1{
+    width: 300px;
+   height: 280px;
+    border-style: solid;
+    border-color: black;
+    filter: opacity(50%);
+    border-radius: 10px;
+    cursor: pointer;
+}
+.img2{
+    width: 300px;
+    height: 280px;
+   filter: opacity(50%);
+   cursor: pointer;
+}
+.img3{
+    width: 300px;
+   height: 280px;
+    filter: opacity(50%);
+    cursor: pointer;
+}
+.img4{
+    width: 300px;
+   height: 280px;
+    object-fit: cover;
+    filter: opacity(50%);
+    cursor: pointer;
+}
+.sub-text{
+    position: absolute;
+    top: 20%;
+    font-size: 50px;
+    font-weight: 500;
+}
+
+
+
+

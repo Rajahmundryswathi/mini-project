@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login-page</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <img class="logo" src="images/bookFinder-logo.jpeg">
+            <div class="logo-heading">
+                <h1 style="padding: 0px; margin-top: 10px">BookFinder</h1>
+        </div>
+    </header>
+    <div class="main-cls">
+    <div class="main">
+        <h2>Login</h2>
+       <form action="" id="loginform">
+          <label for="username">username</label>
+          <input text="username" type="text" id="name" placeholder="Enter your username">
+          <label for="password">password</label>
+          <input text="password" type="password" id="password" placeholder="Enter your password" required >
+          <div class="login-button-class">
+              <button type="submit">
+                 Login
+              </button>
+          </div>
+        </form>
+    </div>
+    </div>
+    <script>
+        document.getElementById('loginform').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const password = document.getElementById('password').value;
+            if (password === '123') {
+                window.location.href = 'page1.html';
+            } else {
+                alert('Incorrect password. Please try again.');
+            }
+        });
+    </script>
+</body>
+</html>

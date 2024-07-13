@@ -1,0 +1,67 @@
+ .logo{
+    height: 60px;
+    border-radius: 30px;
+    box-shadow: 2px 2px 10px grey;
+    display: inline-block;
+}
+.logo-heading{
+    margin-left: 20px;
+    font-family: Georgia;
+} 
+.navbar{
+    height: 70px;
+    display: flex;
+}
+body .main-cls{
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.main{
+    width: 500px;
+    height: 300px;
+    text-align: center;
+    background-color: white;
+    padding: 40px 25px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px;
+}
+
+h2{
+    color: black;
+}
+label{
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: left;
+    font-weight :bold;
+    font-size: 20px;
+
+}
+input{
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    height: 30px;
+    font-size: 15px;
+}
+button{
+    width: 30%;
+    margin-top: 20px;
+    border: none;
+    border-radius: 10px;
+    height: 30px;
+    cursor: pointer;
+    font-size: 20px;
+    background-color: rgb(73, 73, 211);
+    color: white;
+    transition: 0.25s;
+    text-decoration:none;
+}
+button:hover{
+    background-color: black;
+}
