@@ -14,7 +14,7 @@
 }
 body .main-cls{
     display: flex;
-    min-height: 100vh;
+    min-height: 90vh;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -57,7 +57,7 @@ button{
     height: 30px;
     cursor: pointer;
     font-size: 20px;
-    background-color: rgb(73, 73, 211);
+    background-color: rgb(163, 49, 20);
     color: white;
     transition: 0.25s;
     text-decoration:none;

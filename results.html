@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+    <link rel="stylesheet" href="page1.css">
+</head>
+<body>
+    <header>
+        <!-- navigation-bar -->
+        <div class="navbar">
+            <img class="logo" src="images/bookFinder-logo.jpeg">
+            <div class="logo-heading">
+                <h1 style="padding: 0px; margin-top: 10px">BookFinder</h1>
+            </div>
+        </div>
+        <div class="header">
+            <div class="left-sec">
+                <ul>
+                    <li class="list-cls">
+                        <a href="page1.html">Home</a>
+                        <a href="#">About</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="right-sec">
+                <button id="logout" class="logout-class">Logout</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="results-container" id="resultContainer">
+        <!-- Results will be displayed here -->
+    </div>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const query = urlParams.get('query');
+        const rack = urlParams.get('rack');
+
+        // Fetch results based on query or rack
+        if (query) {
+            fetchResults(query);
+        } else if (rack) {
+            fetchRack(rack);
+        }
+
+        function fetchResults(query) {
+            fetch(`http://127.0.0.1:5000/search?query=${encodeURIComponent(query)}`)
+                .then(response => {
+                    if (!response.ok) {
+                        console.error('Error fetching data:', response.statusText);
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    console.log('Data received:', data);
+                    displayResults(data);
+                })
+                .catch(error => {
+                    console.error('Error fetching data:', error);
+                    document.getElementById('resultContainer').innerHTML = '<p>Error fetching data. Please try again later.</p>';
+                });
+        }
+
+        function fetchRack(rack) {
+            fetch(`http://127.0.0.1:5000/search?rack=${encodeURIComponent(rack)}`)
+                .then(response => {
+                    if (!response.ok) {
+                        console.error('Error fetching data:', response.statusText);
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    console.log('Data received:', data);
+                    displayResults(data);
+                })
+                .catch(error => {
+                    console.error('Error fetching data:', error);
+                    document.getElementById('resultContainer').innerHTML = '<p>Error fetching data. Please try again later.</p>';
+                });
+        }
+
+        function displayResults(data) {
+            const resultContainer = document.getElementById('resultContainer');
+            resultContainer.innerHTML = ''; // Clear previous results
+
+            if (data.total_results === 0) {
+                resultContainer.innerHTML = '<p>No books found matching your query.</p>';
+            } else if (data.books) {
+                data.books.forEach(book => {
+                    const bookElement = document.createElement('div');
+                    bookElement.classList.add('book');
+                    bookElement.innerHTML = `
+                        <h2>${book.title}</h2>
+                        <p><strong>Author:</strong> ${book.author}</p>
+                        <p><strong>Description:</strong> ${book.description}</p>
+                        <p><strong>Keywords:</strong> ${book.keywords}</p>
+                        <p><strong>Rack:</strong> ${book.rack}</p>
+                        <hr>
+                    `;
+                    resultContainer.appendChild(bookElement);
+                });
+            } else {
+                resultContainer.innerHTML = '<p>Error displaying results. Please try again.</p>';
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,3 +1,6 @@
+body {
+    margin: 0;
+}
 
 .logo{
     height: 60px;
@@ -14,23 +17,41 @@
     display: flex;
 }
 .header{
+    display:flex;
     background-color: black;
-    height: 55px;
+    height: 4rem;
+    color: white;
+}
+.left-sec{
     display: flex;
+    flex: 1;
+    background-color: black;
+}
+.right-sec{
+    display:flex;
+    flex: 1;
+    justify-content: end;
 }
 ul{
     list-style: none;
-    display: flex;
 }
-li a{
+.list-cls a{
     text-decoration: none;
-    padding: 10px;
-    color: white;
-    font-size: 20px;
-    vertical-align: top;
+    color: rgb(204, 192, 192);
+    font-size: 1.4rem;
+    align-items: center;
+    margin: 10px;
 }
+.logout-class{
+   margin-right: 20px;
+
+}
+
+
 li a:hover{
-   background-color: rgb(199, 191, 191);
+   /* background-color: rgb(199, 191, 191); */
+    color: white;
+   /* padding: 10px; */
 }
 .nav-rightbar{
     margin-left: 1150px;
@@ -38,12 +59,14 @@ li a:hover{
     cursor: pointer;
 }
 .logout-class:hover{
-    background-color: grey;
-}
+    /* background-color: grey;
+    margin: 10px; */
+    color: white;
+} 
 /* button */
 .button-class ,.logout-class{
     background-color: black;
-    color: white;
+    color: rgb(185, 171, 171);
     border: none;
     font-size: 20px;
     font-family: 'Times New Roman', Times, serif;
@@ -58,7 +81,7 @@ li a:hover{
     margin-left: 10px;
 
 }
-.books-list{
+/* .books-list{
     display: none;
     position: absolute;
     background-color: black;
@@ -76,7 +99,7 @@ li a:hover{
 }
 .button-div:hover .button-class {
     background-color: grey;
-}
+} */
 
 /* image-background */
 .img-class{
@@ -84,6 +107,9 @@ li a:hover{
     height: 350px;
     object-fit: cover;
     object-position: center;
+    display: flex;
+    flex: 1;
+    
 }
 
 .input-div{
@@ -93,12 +119,38 @@ li a:hover{
     display: flex;
     
 }
+.dropdwn{
+    border-radius: 7px;
+    border-style: none;
+    background-color:rgb(39, 2, 2);
+    color: white;
+    margin: 0px;
+    display: flex;
+    height: 42px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    text-align:center;
+    width: 70px;
+}
 .search{
-    width:  500px;
+    flex: 1;
+    display: flex;
+    /* max-width: 500px; */ 
+    width: 500px;
     height: 40px;
     border-radius: 7px; 
     font-size: 20px;  
     padding-left: 10px;
+    border-style: solid;
+    border-width: 1px;
+    border-color:rgb(185, 171, 171);
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0;
+}
+.icon-but{
+    background-color: rgb(39, 2, 2);
+    border-style: none;
+    color: white;
 }
 .icon{
     background-color: rgb(39, 2, 2);
@@ -109,8 +161,8 @@ li a:hover{
    cursor: pointer;
    border-radius: 8px;
 }
-.icon:hover{
-    opacity: 0.6;
+.icon:active{
+    opacity: 0.3;
 }
 i{
     margin-top: 16px; 
@@ -144,7 +196,52 @@ i{
 
 /* for boxes */
 
-.main-boxes{
+.main-box{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 15px;
+    height: 400px;;
+    background-color: rgb(118, 78, 78);
+    margin-top: -4px;
+    
+
+}
+.box-1,.box-3{
+    background-color:  rgb(228, 224, 206);
+    height: 400px;
+}
+.box-2,.box-4{
+    background-color: rgb(228, 224, 206);
+    height: 400px;
+}
+
+.box-1,.box-2,.box-3,.box-4 {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.img-1,.img-2,.img-3,.img-4
+{
+    width: 20.3rem;
+    height: 19rem;
+    object-fit: cover;
+    /* margin-bottom: 4rem; */
+
+
+}
+.img-1 {
+    box-shadow: inset 5px 5px 5px 5px rgba(0, 0, 0, 0.15);
+}
+
+p{
+    font-size: 1.5rem;
+}
+
+
+/* .main-boxes{
     position: absolute;
     top: 70%;
     margin-left: 20px;
@@ -154,16 +251,16 @@ i{
     padding: 10px;
     margin-right: 45px;
     /* margin-top: 20px; */
-    border-color: white;
+    */ /* border-color: white;
     background-color: white;
     border-style: solid;
     /* border-width: 2px; */
-    width: 300px;
+    /* width: 300px;
     height: 300px;
     border-radius: 10px;
-    transition: 0.25s;
-}
-.box:hover{
+    transition: 0.25s; */
+*/
+/* .box:hover{
     box-shadow: 2px 2px 15px white;
 }
 .box1.box{
@@ -189,8 +286,8 @@ i{
 }
 .box4.box:hover{
     box-shadow: 2px 8px 10px;
-}
-.img1{
+} */ 
+/* .img1{
     width: 300px;
    height: 280px;
     border-style: solid;
@@ -217,13 +314,41 @@ i{
     object-fit: cover;
     filter: opacity(50%);
     cursor: pointer;
-}
+} */
 .sub-text{
     position: absolute;
     top: 20%;
     font-size: 50px;
     font-weight: 500;
 }
+/* Add this to your CSS file (e.g., page1.css) */
+/* 
+.results-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.results-table th, .results-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.results-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    text-align: center;
+}
+
+.results-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.results-table tr:hover {
+    background-color: #f1f1f1;
+} */
+
 
 
 
